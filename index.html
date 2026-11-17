@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BMS Battery Monitor: LiFePO4 Privacy Policy</title>
+<style>:root{color-scheme:light dark}body{font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:760px;margin:0 auto;padding:24px 16px;background:Canvas;color:CanvasText}h1{font-size:1.6em}code{font-size:.9em}nav{margin-bottom:16px}</style>
+</head><body><nav><a href="pt/">Português (Brasil)</a></nav>
+<h1>BMSViewer Privacy Policy</h1>
+<p>App: BMSViewer, listed on Google Play as "BMS Battery Monitor: LiFePO4" (package local.bmsviewer.app).</p>
+<p>Developer: Alan Spohr Perius</p>
+<p>Effective date: 2026-11-16</p>
+<p>Contact: <a href="mailto:alan.perius.mv@gmail.com">alan.perius.mv@gmail.com</a></p>
+<p>BMSViewer is an Android app that connects over Bluetooth Low Energy (BLE) to the BMS (battery management system) of a battery that uses a JK BMS and shows its data on screen. The app only sends read requests (device information and cell information) and enables notifications. It never changes any BMS setting.</p>
+<h2>1. Summary</h2>
+<ul>
+<li>By itself, the app does not send data to the developer&#x27;s servers or to any third party. Your readings stay on your phone unless you export them.</li>
+<li>The app does not declare the INTERNET permission.</li>
+<li>No ads, no analytics, no crash-reporting SDK.</li>
+<li>No account, sign-up or login. No purchases.</li>
+</ul>
+<h2>2. Data the app reads</h2>
+<p>When connected to your BMS, the app reads:</p>
+<ul>
+<li>Battery reading: state of charge (SOC), voltage, current, power and remaining capacity.</li>
+<li>Voltage of each cell and the difference between cells.</li>
+<li>Temperatures (several sensors). In the history, the app stores the maximum temperature.</li>
+<li>Diagnostics: permission and Bluetooth state, signal strength, firmware variant and a connection log with fixed texts. This screen is not saved on the device.</li>
+<li>An opaque battery identifier, which may be the Bluetooth address of the BMS. It is used to recognize your saved battery and is never shown in the app.</li>
+</ul>
+<p>The app does not use your location, contacts, photos, microphone, camera or advertising identifier. It creates a file only when you export history as CSV (section 5).</p>
+<h2>3. Permissions and why</h2>
+<ul>
+<li>Nearby devices, scan (BLUETOOTH_SCAN, Android 12+): find your BMS. Declared with &quot;neverForLocation&quot;, so the scan is not used to infer your location.</li>
+<li>Nearby devices, connect (BLUETOOTH_CONNECT, Android 12+): connect to the BMS you choose.</li>
+<li>Bluetooth and Bluetooth admin (BLUETOOTH, BLUETOOTH_ADMIN), Android 11 and older only: older equivalents of the two above.</li>
+<li>Approximate and precise location (ACCESS_COARSE_LOCATION, ACCESS_FINE_LOCATION), Android 11 and older only: Android requires it to scan for Bluetooth devices on those versions. The app does not read or store your location.</li>
+<li>Foreground service (FOREGROUND_SERVICE, FOREGROUND_SERVICE_CONNECTED_DEVICE): keeps the connection to the BMS when you turn on &quot;Always connected&quot;.</li>
+<li>Notifications (POST_NOTIFICATIONS): used only for the notification of that foreground service. It shows the battery charge percentage and power, and can be visible on the lock screen. If you deny the notification permission, the connection is still kept, but without a visible notice. The app sends no other notifications; alerts appear only inside the app.</li>
+<li>Wake lock (WAKE_LOCK): one partial wake lock, held for at most 75 seconds. It covers the 60-second background grace period, releasing the Bluetooth link and one reconnect cycle. It is held even when &quot;Always connected&quot; is off.</li>
+</ul>
+<p>The app uses Android&#x27;s link feature only to open the system settings page of the app.</p>
+<h2>4. What is stored on your device</h2>
+<p>Everything is stored locally in the app&#x27;s private storage (AsyncStorage):</p>
+<ul>
+<li>Saved batteries (up to 10), each with an opaque identifier (which may be the Bluetooth address, never shown) and a nickname you choose; the pinned battery.</li>
+<li>Language, theme (auto, dark or light), alert thresholds and the &quot;Always connected&quot; setting.</li>
+<li>The last reading of each battery.</li>
+<li>Reading history per battery: SOC, voltage, current, power, cell difference, minimum and maximum cell voltage and maximum temperature. Kept per minute, then grouped into 15-minute intervals after 48 hours, for up to 30 days, capped at about 2.5 MB.</li>
+</ul>
+<p>The data is not encrypted by the app at rest; it relies on Android&#x27;s app-private storage. Automatic Android backup (cloud and device-to-device transfer) is disabled for the app.</p>
+<h2>5. Export and sharing</h2>
+<ul>
+<li>The developer receives no data.</li>
+<li>On the History screen you can export a CSV file through the Android share sheet. This happens only when you tap export. The app creates a temporary file for sharing. The file contains UTC timestamps and the readings only, with no battery identifier, nickname or Bluetooth address.</li>
+<li>By itself, the app sends the CSV nowhere. You choose the destination app, and from then on that app&#x27;s own privacy policy applies.</li>
+<li>The app does not sell data or share it with third parties by itself.</li>
+</ul>
+<h2>6. Retention and deletion</h2>
+<ul>
+<li>History is kept for at most 30 days and capped at about 2.5 MB.</li>
+<li>&quot;Erase history of this battery&quot; deletes only the history of that battery.</li>
+<li>The app has no function to remove a saved battery. To remove saved batteries, identifiers, nicknames, last readings and settings, clear the app data in Android settings or uninstall the app.</li>
+<li>Because data stays on your device, the developer has no access to it and cannot fulfil deletion requests for it; you delete it as described above.</li>
+<li>A CSV you exported is a separate file outside the app; delete it yourself where you saved or sent it.</li>
+</ul>
+<h2>7. Children</h2>
+<p>The app is not directed at children and does not knowingly process children&#x27;s data.</p>
+<h2>8. Changes</h2>
+<p>Changes to this policy will be published on this page with a new effective date.</p>
+<h2>9. Contact</h2>
+<p><a href="mailto:alan.perius.mv@gmail.com">alan.perius.mv@gmail.com</a></p>
+<p>---</p>
+</body></html>
